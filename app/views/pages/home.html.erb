@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussin' Books</title>
+</head>
+<body>
+    <!-- Navbar -->
+        <%= render "shared/navbar" %>
+
+    <!-- Main Body Content -->
+        <main>
+            <!-- Bootstrap Layout for showing items on homepage -->
+              <div class="album py-5">
+                <div class="container">
+                <p>Here are some most recent listings!</p>
+
+              <!-- Recent Listings for homepage -->
+                <div class="row">
+                  <%= render "shared/recent" %>
+                </div>
+
+    <!-- Footer -->
+          <%= render "shared/footer" %> 
+        </main>
+    </div>
+</body>

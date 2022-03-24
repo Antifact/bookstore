@@ -1,0 +1,39 @@
+<%= render "shared/navbar" %>
+
+<h2>Log in</h2>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="card">
+  <div class="card-body">
+
+    <div class="mb-3">
+      <%= f.label :username, { class: "form-label" } %>
+      <%= f.text_field :username, { class: "form-control", placeholder: "username", autofocus: true } %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password, { class: "form-label" } %>
+      <%= f.password_field :password, { class: "form-control", placeholder: "password" } %>
+    </div>
+
+    <div class="mb-3">
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= f.submit "Log In", class: "btn btn-primary" %>
+
+  </div>
+</div>
+<% end %>
+<br>
+
+<%= render "devise/shared/links" %>
+
+<!-- Footer -->
+<%= render "shared/footer" %> 

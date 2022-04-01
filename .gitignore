@@ -33,4 +33,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore master key PLEASE
-#config/master.key
+config/master.key

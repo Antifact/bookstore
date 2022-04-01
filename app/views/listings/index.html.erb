@@ -5,12 +5,17 @@
   <h1>Browse Listings</h1>
 <header>
 
+<!-- 
+  The following is how each listing will be displayed in the /listings page. 
+  Using bootstrap to style, each item will be inserted into a position in the row.
+-->
+
 <div class="row">
 <% @listings.each do |listing| %>
   <div class="col-md-4">
     <div class="card mb-4 shadow-sm">
       <% if listing.picture.attached? %>
-        <%= image_tag listing.picture, alt: "memes", class: "card-img-top" %>
+        <%= image_tag listing.picture, alt: "image", class: "card-img-top" %>
       <% end %>
 
       <div class="card-body">

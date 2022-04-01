@@ -17,6 +17,15 @@ class ListingsController < ApplicationController
   def edit
   end
 
+  def search
+    if params[:search].blank?
+      redirect_to root_path and return
+    else
+      @parameter = params[:search].downcase
+      @results = Listing.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
   def create
     @listing = Listing.new(title: listing_params[:title], price: listing_params[:price], description: listing_params[:description], user_id: current_user.id, picture: listing_params[:picture])
     respond_to do |format|

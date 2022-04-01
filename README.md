@@ -43,11 +43,10 @@ The relations for the databases in this application only include the listings be
 
 ### User Stories
 
-As a user, I want to be able to sell my book.
+As a user, I want to be able to make a listing, if I'm signed in.
 
 As a guest, I would like to be able to login or register.
 
 As a guest, I would like to browse the listings.
 
 As a seller, I would like to edit my listing if need be.
-

@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
       redirect_to root_path and return
     else
       @parameter = params[:search].downcase
-      @results = Listing.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
+      @listingMatch = Listing.where("lower(title) LIKE ?", "%#{@parameter}%")
     end
   end
 

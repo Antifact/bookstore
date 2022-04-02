@@ -1,4 +1,4 @@
-<!-- Navbar  -->
+<!-- Navbar that collapses into a more accessible navigation menu when screens are too small  -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Bussin' Books</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleContent" aria-controls="toggleContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,12 +13,13 @@
               <%=link_to "Sell", new_listing_path, class: "nav-link"%>
           </li>
       </ul>
+
+      <!-- 
+      This checks to see if the user is signed in, if they are, the navbar will only show a Log Out link
+      If they aren't signed in, then the navbar will display a Register and Login button.
+       -->
+
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <%= form_tag(search_path, :method => "get") do %>
-          <div class="input-group">
-            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
-            <div class="input-group-btn">
-        <% end %>
           <%if user_signed_in?%>
             <li class="nav-item">
               <%=link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%>
@@ -32,6 +33,16 @@
               <%=link_to "Login", new_user_session_path, class: "nav-link"%>
             </li>
           <%end%>
+      
+      <!--
+      The defines the search field in the navbar, using bootstrap for positioning and styling.
+      -->
+
+          <%= form_tag(search_path, :method => "get") do %>
+          <div class="form-inline my-2 my-lg-0">
+            <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+            <div class="input-group-btn">
+          <% end %>
       </ul>
   </div>
 </nav>

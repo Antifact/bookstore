@@ -17,6 +17,7 @@ As books are read by people of all ages, the application's target audience has t
 
 The Tech Stack used for this application is Ruby on Rails, HTML and CSS, using Bootstrap as a framework for CSS, and PostgresQL for the database. Devise is utilised for user authentication and registration/logging in for this application. Third party services that this application use are Amazon's AWS and Heroku. Amazon's AWS is a cloud platform that offers a wide variety of services. AWS is well-known, highly supported, rather simple to configure and even easier to integrate into the application, making it highly desirable to utilise. In this application, it is used for image uploading and serving. Heroku is another cloud platform that is used in this application, specfically for deployment. It is incredibly easy to setup and use, enabling the ability to continuously deploy to the platform. Heroku builds, runs and operates the application after being given the source code and serves it instantly after building. It supports multiple languages, making it a reliable choice for developers to use.
 
+The model associations in this application are incredibly simple, as there are only two models so far. The first is the listing model, and its relation is with the user model, as a listing must belong to a user to be made. This links the listing to the user, by taking the user id of a logged in user when they create a post and attaches it to them. This allows the user who has created a listing to edit that listing and, in future, users can browse listings made by a user. Having this relation also enables mitigation of unauthorised access of editing listings or deleting posts by people that are neither the creator nor an administrator. The user model only has a relation in that a user can have multiple listings. As the listing must have a user, the user can also have more than one listing on the website. 
 
 ### Screenshots
 
@@ -24,7 +25,7 @@ The Tech Stack used for this application is Ruby on Rails, HTML and CSS, using B
 
 ![Login](docs/login.png)
 
-![Listings](docs/listings.png)
+![Listing](docs/listing.png)
 
 ### Wireframes
 
@@ -60,13 +61,17 @@ The relations for the databases in this application only include the listings be
 
 ![User Schema](docs/user_schema.png)
 
+Further relations that will be implemented will include a commenting and rating system, that will allow both posts and users to have multiple ratings and comments from other users. As per the ERD, there is only the relation between the listings to users. A listing can have a comment or rating, but the comment or rating must belong to a user. Listings will then have ```has_many :comments``` in the model to allow for multiple comments or ratings. 
+
 
 ### User Stories
 
-As a user, I want to be able to make a listing, if I'm signed in.
+As a guest, I want to be able to log in, so that I can create a listing.
 
-As a guest, I would like to be able to login or register.
+As a seller, I want to be able to edit my listing, in case I change my mind on some details.
 
-As a guest, I would like to browse the listings.
+As a user, I want to be able to register, so that I can buy and sell my books.
 
-As a seller, I would like to edit my listing if need be.
+As an admin, I want to be able to edit and delete listings, in case something inappropriate is uploaded.
+
+As a user, I want to be able to log in or log out and be redirected to the home page, so that I don't have to do it myself.

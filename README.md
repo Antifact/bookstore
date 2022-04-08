@@ -11,11 +11,11 @@ Link to [Github](https://github.com/Antifact/bookstore).
 
 This application is designed to serve as an online, ebay-esque, bookstore for people to buy and sell their books. With the comfort and ease of being able to browse or sell your book from anywhere, users can utilise this application to do just that without having to go out of their way to go to a library or store. 
 
-The problem this application intends to solve, is to streamline the exchange of buying or selling a book. Compared to going to x amount of stores or even libraries to find something someone would like to purchase, they can come to this website and use the search feature to at least try to find what they're looking for. This will save users valuable time and is a lot more convenient than travelling around. 
+The problem this application intends to solve, is to streamline the exchange of buying or selling an item, exclusively a book. Compared to going to x amount of stores, physically or online, or even libraries to find something someone would like to purchase, they can come to this website that is specifically focused on selling books. This will save users valuable time and is a lot more convenient than travelling around or searching for an online service. As this application is focused on books alone, the chances are greater for users to buy and sell their books as opposed to going to another marketplace application, which offer a wide variety of items.
 
-The target audience is primarily any adult, as payment is required to buy from other users. However, anyone from teenagers to any aged adult can find use in this application.
+As books are read by people of all ages, the application's target audience has the advantage of being anyone. However, the target audience is expected to be primarily adult, as payment is required to buy from other users. The application does not target a specific audience and has the advantage of having a vast target audience, which is to maximise on the usage of the app.
 
-The Tech Stack used for this application is Ruby on Rails, HTML and CSS. Devise is utilised for user authentication and registration/logging in for this application. Third party services that this application use are Amazon's AWS and Heroku. Amazon's AWS was used for image storage as it's well-known, highly supported, rather simple to configure and even easier to integrate into the application, making it highly desirable to utilise. Heroku was used for deployment as it is incredibly easy to setup and use, enabling the ability to continuously deploy to the platform. Heroku will automatically detect all settings specified in an application, and has default settings that it will use if not specified in the app. 
+The Tech Stack used for this application is Ruby on Rails, HTML and CSS, using Bootstrap as a framework for CSS, and PostgresQL for the database. Devise is utilised for user authentication and registration/logging in for this application. Third party services that this application use are Amazon's AWS and Heroku. Amazon's AWS is a cloud platform that offers a wide variety of services. AWS is well-known, highly supported, rather simple to configure and even easier to integrate into the application, making it highly desirable to utilise. In this application, it is used for image uploading and serving. Heroku is another cloud platform that is used in this application, specfically for deployment. It is incredibly easy to setup and use, enabling the ability to continuously deploy to the platform. Heroku builds, runs and operates the application after being given the source code and serves it instantly after building. It supports multiple languages, making it a reliable choice for developers to use.
 
 
 ### Screenshots
@@ -28,9 +28,24 @@ The Tech Stack used for this application is Ruby on Rails, HTML and CSS. Devise 
 
 ### Wireframes
 
-![Home](docs/home_wireframe.jpg)
+![Home](docs/home_wireframe.png)
 
-![Listing](docs/listing_wireframe.jpg)
+![Browse Listings](docs/all_listings_wireframe.png)
+
+![Listing](docs/listing_wireframe.png)
+
+![Login](docs/login_wireframe.png)
+
+![Register](docs/register_wireframe.png)
+
+![Mobile Home](docs/mob_home_wireframe.png)
+
+![Mobile Navbar](docs/mob_nav_wireframe.png)
+
+![Mobile Register](docs/mob_register_wireframe.png)
+
+![Mobile Login](docs/mob_login_wireframe.png)
+
 
 ### ERD
 

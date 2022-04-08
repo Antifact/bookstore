@@ -14,6 +14,11 @@
 <% @listings.each do |listing| %>
   <div class="col-md-4">
     <div class="card mb-4 shadow-sm">
+
+    <!-- 
+      This checks to see if the listing has an image, and if it does, displays it with some bootstrap styling.
+      This is done because during testing, there were listings without images. This will be updated later
+     -->
       <% if listing.picture.attached? %>
         <%= image_tag listing.picture, alt: "image", class: "card-img-top" %>
       <% end %>
@@ -36,6 +41,7 @@
 
 <br>
 
+<!-- A link to create a new listing -->
 <%= link_to 'New Listing', new_listing_path %>
 
 <!-- Footer -->

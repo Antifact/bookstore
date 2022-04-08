@@ -3,10 +3,12 @@
 
 <h1>Edit Listing</h1>
 
+<!-- This displays the _form.html.erb file in the /id/edit url -->
 <%= render 'form', listing: @listing %>
 
 <br>
 
+<!-- Links to show the listing or go back to all of the listings  -->
 <%= link_to 'Show', @listing %> |
 <%= link_to 'Back', listings_path %>
 

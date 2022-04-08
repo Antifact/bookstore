@@ -3,6 +3,10 @@
 
 <h1>New Listing</h1>
 
+
+<!--
+  This form is for creating a listing. It shows displays each error if there are any.
+-->
 <%= form_with(model: @listing) do |form| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
@@ -16,6 +20,10 @@
     </div>
   <% end %>
   
+
+  <!-- 
+    The form itself, with styling utilising bootstrap.
+  -->
   <div class="card">
     <div class="card-body">
 
